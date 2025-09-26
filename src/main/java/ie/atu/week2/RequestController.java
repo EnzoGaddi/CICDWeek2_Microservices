@@ -12,7 +12,7 @@ public class RequestController
     {
         return "hello";
     }
-
+//test
     @GetMapping("/greet/{name}")
     public String greetByNmae(@PathVariable String name)
     {
