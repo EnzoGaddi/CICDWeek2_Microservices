@@ -12,4 +12,10 @@ public class RequestController
     {
         return "hello";
     }
+//test
+    @GetMapping("/greet/{name}")
+    public String greetByName(@PathVariable String name)
+    {
+        return "Hello" + name + "!";
+    }
 }
