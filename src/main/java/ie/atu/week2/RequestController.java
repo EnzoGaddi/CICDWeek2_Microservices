@@ -14,7 +14,7 @@ public class RequestController
     }
 //test
     @GetMapping("/greet/{name}")
-    public String greetByNmae(@PathVariable String name)
+    public String greetByName(@PathVariable String name)
     {
         return "Hello" + name + "!";
     }
