@@ -30,4 +30,34 @@ public class RequestController
     {
         return new Person("Enzo", 19);
     }
+
+    @GetMapping("/Calculator")
+    public Calculator calculate(@RequestParam double num1, @RequestParam double num2, @RequestParam String operate)
+    {
+        double sum;
+
+        switch (operate)
+        {
+            case "add":
+                sum = num1 + num2;
+                break;
+
+            case "sub":
+                sum = num1 - num2;
+                break;
+
+            case "mul":
+                sum = num1 * num2;
+                break;
+
+            case "divide":
+                sum = num1 / num2;
+                break;
+
+            default:
+                sum = 0;
+                break;
+        }
+        return new Calculator(operate, sum);
+    }
 }
